@@ -15,10 +15,15 @@ const splitsElement = document.getElementById('splits');
 
 function printTime() {
   // ... your code goes here
+  minDecElement.innerText = chronometer.getMinutes()[0]
+  minUniElement.innerText = chronometer.getMinutes()[1]
+  secDecElement.innerText = chronometer.getSeconds()[0]
+  secUniElement.innerText = chronometer.getSeconds()[1]
 }
 
 function printMinutes() {
   // ... your code goes here
+  
 }
 
 function printSeconds() {
@@ -32,6 +37,9 @@ function printMilliseconds() {
 
 function printSplit() {
   // ... your code goes here
+  newSplit = document.createElement("li")
+  newSplit.innerText = chronometer.split()
+  splitsElement.appendChild(newSplit)
 }
 
 function clearSplits() {
